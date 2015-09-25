@@ -64,9 +64,19 @@ section {
     border: 2px solid rgb(57, 171, 111);
 }
 #services .services-wrapper {
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 15px;
   margin-bottom: 30px;
+  height: 420px;
+}
+#services .services-wrapper img {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#prices .type {
+  background: rgba(57, 171, 111)
 }
 .social {
   margin: 40px;
