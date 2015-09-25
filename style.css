@@ -13,6 +13,9 @@ body {
 #home {
   margin-top: 200px;
 }
+#menu-section li a:hover{
+  color: rgb(57, 171, 111);
+}
 section {
   padding-top: 80px;
   padding-bottom: 40px;
