@@ -92,12 +92,19 @@ section {
   line-height: 3em;
 }
 
-.social {
-  margin: 40px;
-}
-
-.light-pricing .price {
+#pricing .light-pricing .price {
   padding: 40px 20px 20px 20px;
   font-size: 60px;
   font-weight: 900;
+}
+#contact .contact-wrapper h2 {
+  color: rgb(57, 171, 111);
+  font-size: 40px;
+}
+.
+#contact .contact-wrapper a:hover {
+  color: rgb(57, 171, 111);
+}
+.social {
+  margin: 40px;
 }
