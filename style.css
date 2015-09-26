@@ -7,8 +7,8 @@
 /* FREE GOOGLE FONT */
 
 body {
-    font-family: 'Ubuntu', sans-serif;
-    color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
 }
 #home {
   margin-top: 200px;
@@ -59,15 +59,21 @@ section {
   background-color: rgb(57, 171, 111);
 }
 .btn-custom-two {
-    color: #fff;
-    background-color: rgb(57, 171, 111);
-    border: 2px solid rgb(57, 171, 111);
+  color: #fff;
+  background-color: rgb(57, 171, 111);
+  border: 2px solid rgb(57, 171, 111);
 }
 #services .services-wrapper {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
   margin-bottom: 30px;
-  height: 420px;
+  min-height: 420px;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  border: 2px solid #777;
+}
+#services .services-wrapper ul {
+  list-style: none;
 }
 #services .services-wrapper img {
   width: 250px;
@@ -75,15 +81,23 @@ section {
   margin-bottom: 20px;
 }
 
-#prices .type {
-  background: rgba(57, 171, 111)
+#pricing .light-pricing {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  background: rgba(255,255,255, .1) !important;
 }
+#pricing .type {
+  background-color: rgb(57, 171, 111);
+}
+#pricing .type h2 {
+  line-height: 3em;
+}
+
 .social {
   margin: 40px;
 }
 
 .light-pricing .price {
-    padding: 40px 20px 20px 20px;
-    font-size: 60px;
-    font-weight: 900;
+  padding: 40px 20px 20px 20px;
+  font-size: 60px;
+  font-weight: 900;
 }
