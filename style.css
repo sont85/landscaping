@@ -97,7 +97,7 @@ section hr {
   height: 200px;
   margin-bottom: 20px;
 }
-#pricing .light-pricing {
+#pricing .pricing-wrapper {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
   background: rgba(255,255,255, .1);
 }
@@ -107,7 +107,7 @@ section hr {
 #pricing .type h2 {
   line-height: 3em;
 }
-#pricing .light-pricing .price {
+#pricing .pricing-wrapper .price {
   padding: 40px 20px 20px 20px;
   font-size: 60px;
   font-weight: 900;
