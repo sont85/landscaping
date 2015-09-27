@@ -44,7 +44,7 @@ section hr {
 }
 #home #carousel-slider .item {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #777;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.5);
   padding: 20px 20px 30px 20px;
 }
 #home #carousel-slider .item cite{
@@ -88,7 +88,6 @@ section hr {
   min-height: 420px;
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  border: 1px solid #777;
 }
 #services .services-wrapper ul {
   list-style: none;
@@ -100,7 +99,7 @@ section hr {
 }
 #pricing .light-pricing {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  background: rgba(255,255,255, .1) !important;
+  background: rgba(255,255,255, .1);
 }
 #pricing .type {
   background-color: rgb(57, 171, 111);
@@ -115,6 +114,13 @@ section hr {
 }
 #pricing ul {
   list-style: none;
+}
+#contact .contact-wrapper {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  background: rgba(255,255,255, .1);
+  margin: auto;
+  padding: 20px;
+  width: 350px;
 }
 #contact .contact-wrapper h2 {
   color: rgb(57, 171, 111);
