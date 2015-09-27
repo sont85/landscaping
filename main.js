@@ -8,7 +8,7 @@
 //   }
 // });
 function scroll() {
-$('.scroll-me a').bind('click', function(event) { //just pass scroll-me in design and start scrolling
+$('.scroll-me a').bind('click', function(event) { 
   var $anchor = $(this);
   $('html, body').stop().animate({
     scrollTop: $($anchor.attr('href')).offset().top
