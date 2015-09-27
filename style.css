@@ -42,15 +42,28 @@ section hr {
 #home #carousel-slider {
   margin-bottom: 30px;
 }
+#home #carousel-slider .item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #777;
+  padding: 20px 20px 30px 20px;
+}
+#home #carousel-slider .item cite{
+  float: right;
+}
 #home #carousel-slider h3 {
   line-height: 50px;
   font-family: 'Oswald', sans-serif;
+  color: rgb(57, 171, 111);
 }
 #home #carousel-slider q {
-  color: rgb(57, 171, 111);
   font-size: 16px;
   line-height: 25px;
   margin: 25px 35px;
+}
+#home .guranteed {
+  color: rgb(57, 171, 111);
+  font-weight: bolder;
+  font-size: 30px;
 }
 .btn-custom-one {
   background-color: transparent;
@@ -75,7 +88,7 @@ section hr {
   min-height: 420px;
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  border: 2px solid #777;
+  border: 1px solid #777;
 }
 #services .services-wrapper ul {
   list-style: none;
