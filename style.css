@@ -1,17 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
-
-/* FREE GOOGLE FONT */
-
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-
-/* FREE GOOGLE FONT */
-
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
 #home {
-  margin-top: 200px;
+  margin-top: 170px;
 }
 #menu-section li a:hover{
   color: rgb(57, 171, 111);
@@ -19,6 +13,10 @@ body {
 section {
   padding-top: 80px;
   padding-bottom: 40px;
+}
+section hr {
+  width: 75px;
+  border-top: 2px solid rgb(57, 171, 111);
 }
 .navbar-inverse .navbar-nav > li > a {
   font-size: 12px;
@@ -38,11 +36,17 @@ section {
   background-color: transparent;
   border-bottom: 1px solid rgb(57, 171, 111);
 }
-#carousel-slider h3 {
+#home {
+  margin-bottom: 50px;
+}
+#home #carousel-slider {
+  margin-bottom: 30px;
+}
+#home #carousel-slider h3 {
   line-height: 50px;
   font-family: 'Oswald', sans-serif;
 }
-#carousel-slider p {
+#home #carousel-slider q {
   color: rgb(57, 171, 111);
   font-size: 16px;
   line-height: 25px;
@@ -62,6 +66,7 @@ section {
   color: #fff;
   background-color: rgb(57, 171, 111);
   border: 2px solid rgb(57, 171, 111);
+  margin-top: 30px;
 }
 #services .services-wrapper {
   background-color: rgba(255, 255, 255, 0.1);
@@ -80,7 +85,6 @@ section {
   height: 200px;
   margin-bottom: 20px;
 }
-
 #pricing .light-pricing {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
   background: rgba(255,255,255, .1) !important;
@@ -91,20 +95,18 @@ section {
 #pricing .type h2 {
   line-height: 3em;
 }
-
 #pricing .light-pricing .price {
   padding: 40px 20px 20px 20px;
   font-size: 60px;
   font-weight: 900;
 }
+#pricing ul {
+  list-style: none;
+}
 #contact .contact-wrapper h2 {
   color: rgb(57, 171, 111);
   font-size: 40px;
 }
-.
-#contact .contact-wrapper a:hover {
-  color: rgb(57, 171, 111);
-}
-.social {
-  margin: 40px;
+#contact .contact-wrapper .btn {
+  margin-bottom: 30px;
 }
