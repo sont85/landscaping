@@ -8,7 +8,7 @@
 //   }
 // });
 function scroll() {
-$('.scroll-me a').bind('click', function(event) { 
+$('.scroll-me a').bind('click', function(event) {
   var $anchor = $(this);
   $('html, body').stop().animate({
     scrollTop: $($anchor.attr('href')).offset().top
@@ -25,15 +25,15 @@ function carousel() {
 function slideshow() {
   $.vegas('slideshow', {
     backgrounds: [{
-      src: 'http://jimesperlandscaping.com/wp-content/uploads/2013/05/image9.jpg',
+      src: './assets/img/landscape1.jpg',
       fade: 1000,
       delay: 9000
     }, {
-      src: 'http://dtelga.com/wp-content/uploads/2014/03/Landscaping-1.png',
+      src: './assets/img/landscape2.png',
       fade: 1000,
       delay: 9000
     }, {
-      src: 'http://www.arborlawnandtree.com/images/154099460.jpg',
+      src: './assets/img/landscape3.jpg',
       fade: 1000,
       delay: 9000
     }]

@@ -115,6 +115,12 @@ section hr {
 #pricing ul {
   list-style: none;
 }
+#portfolio .item {
+  height: 400px;
+}
+#portfolio .item img {
+  height: 400px;
+}
 #contact .contact-wrapper {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
   background: rgba(255,255,255, .1);
