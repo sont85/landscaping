@@ -116,10 +116,14 @@ section hr {
   list-style: none;
 }
 #portfolio .item {
+  border-top: 10px solid rgb(57, 171, 111);
+  border-bottom: 10px solid rgb(57, 171, 111);
+
   height: 400px;
 }
 #portfolio .item img {
-  height: 400px;
+  height: 380px;
+  width: 100%;
 }
 #contact .contact-wrapper {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
