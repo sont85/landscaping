@@ -8,6 +8,7 @@
   <link href="assets/css/bootstrap.css" rel="stylesheet" />
   <link href="assets/css/font-awesome.css" rel="stylesheet" />
   <link href="assets/js/source/jquery.fancybox.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css" rel="stylesheet" />
   <!-- STYLES FOR VIEWPORT ANIMATION -->
   <link href="assets/css/animations.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
@@ -172,7 +173,7 @@
               </ul>
             </div>
             <div class='col-sm-4 text-center'>
-              <a href="#" class="btn button-custom btn-custom-one">BOOK APPOINTMENT</a>
+              <a href="#" data-toggle="modal" data-target="#appointment" class="btn button-custom btn-custom-one">BOOK APPOINTMENT</a>
             </div>
           </div>
         </div>
@@ -200,7 +201,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img class='img-responsive center-block'src="./assets/img/landscape1.jpg" alt="...">
+                <img class='img-responsive center-block' src="./assets/img/landscape1.jpg" alt="...">
                 <div class="carousel-caption">
                   New Lawn
                 </div>
@@ -246,9 +247,39 @@
           <div class="contact-wrapper text-center">
             <h4>Call Anytime for </h4>
             <h2>Free Estimates</h2>
-            <a class='btn btn-default btn-lg' href='mailto:Dannylee@gmail.com'><i class='fa fa-envelope-o'></i>dannylee@gmail.com</a>
             <a class='btn btn-default btn-lg' href='tel:707-247-4292'><i class='fa fa-phone'></i>707-246-4292</a>
+            <a class="btn btn-default btn-lg" data-toggle="modal" data-target="#appointment">Book Appointment</a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Book Appointment</h4>
+          </div>
+          <form class="" id="contact_form">
+            <div class="modal-body">
+              <label for="name">Name</label>
+              <input class='form-control' id="name" name="name" type="text" placeholder='name' required>
+              <label for="email">Phone Number</label>
+              <input class="form-control" id="phone" name="phone" type="tel" placeholder='123-456-7890' required>
+              <label for="email">Email</label>
+              <input class="form-control" id="email" name="email" type="email" placeholder='email' required>
+              <label for="msg">Message</label>
+              <textarea class="form-control" id="msg" name="msg" class="" cols="6" rows="6" placeholder='' required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button class="btn btn-default" type="submit">Send Message</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -259,6 +290,7 @@
   <script src="https://cdn.jsdelivr.net/jquery.vegas/1.3.4/jquery.vegas.js"></script>
   <script src="assets/js/source/jquery.fancybox.js"></script>
   <script src="assets/js/appear.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
   <script src="assets/js/animations.min.js"></script>
   <script src="main.js"></script>
 </body>

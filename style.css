@@ -138,3 +138,6 @@ section hr {
 #contact .contact-wrapper .btn {
   margin-bottom: 30px;
 }
+.modal {
+  color: black;
+}
