@@ -1,11 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Exo:400,900);
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
 }
 #home {
-  margin-top: 120px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+#home .title {
+  font-family: Exo;
 }
 #menu-section li a:hover{
   color: rgb(57, 171, 111);
@@ -36,31 +41,31 @@ section hr {
   background-color: transparent;
   border-bottom: 1px solid rgb(57, 171, 111);
 }
-#home {
+#testimonial {
   margin-bottom: 50px;
 }
-#home #carousel-slider {
+#testimonial #carousel-slider {
   margin-bottom: 30px;
 }
-#home #carousel-slider .item {
+#testimonial #carousel-slider .item {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 5px rgba(0,0,0, 0.5);
   padding: 20px 20px 30px 20px;
 }
-#home #carousel-slider .item cite{
+#testimonial #carousel-slider .item cite{
   float: right;
 }
-#home #carousel-slider h3 {
+#testimonial #carousel-slider h3 {
   line-height: 50px;
   font-family: 'Oswald', sans-serif;
   color: rgb(57, 171, 111);
 }
-#home #carousel-slider q {
+#testimonial #carousel-slider q {
   font-size: 16px;
   line-height: 25px;
   margin: 25px 35px;
 }
-#home .guranteed {
+#testimonial .guranteed {
   color: rgb(57, 171, 111);
   font-weight: bolder;
   font-size: 30px;
@@ -115,13 +120,13 @@ section hr {
 #pricing ul {
   list-style: none;
 }
-#portfolio .item {
+#work .item {
   border-top: 10px solid rgb(57, 171, 111);
   border-bottom: 10px solid rgb(57, 171, 111);
 
   height: 400px;
 }
-#portfolio .item img {
+#work .item img {
   height: 380px;
   width: 100%;
 }
