@@ -141,3 +141,7 @@ section hr {
 .modal {
   color: black;
 }
+
+.modal .time-wrap {
+  padding-top: 50px;
+}

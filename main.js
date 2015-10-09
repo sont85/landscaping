@@ -7,12 +7,18 @@
 //     }
 //   }
 // });
+'use strict';
+var $;
 function mail() {
-  $('#contact_form').submit(function() {
-    var email = $('#email').val(); // get email field value
-    var name = $('#name').val(); // get name field value
-    var msg = $('#msg').val(); // get message field value
-    var phone = $('#phone').val(); // get message field value
+  $('#contact_form').submit(function(e) {
+    e.preventDefault();
+    var email = $('#email').val();
+    var name = $('#name').val();
+    var msg = $('#msg').val();
+    var phone = $('#phone').val();
+    var date = $('#datepicker').datepicker( 'getDate' );
+    var time = $('#timepicker').val();
+    console.log('Phone Number: ' + phone + '\n' + 'Appointment Time' + date + '-' + time + '\n' + msg);
     $.ajax({
       type: 'POST',
       url: 'https://mandrillapp.com/api/1.0/messages/send.json',
@@ -25,7 +31,7 @@ function mail() {
             'Reply-To': email
           },
           'subject': 'Website Contact Form Submission',
-          'text': 'Phone Number: ' + phone + '\n' + msg,
+          'text': 'Phone Number: ' + phone + '\n' + 'Appointment Time' + date + ' ' + time + '\n' + msg,
           'to': [{
             'email': 'vietlyfe@gmail.com',
             'name': 'Danny Lee',
@@ -34,17 +40,16 @@ function mail() {
         }
       }
     }).done(function(response) {
-      console.log(response)
+      console.log(response);
       $('#name').val(''); // reset field after successful submission
       $('#email').val(''); // reset field after successful submission
       $('#msg').val(''); // reset field after successful submission
       $('#phone').val(''); // reset field after successful submission
       $('#appointment').modal('hide');
-      swal("Message Sent", "Danny Lee will get back to you within 24hours", "success")
+      swal('Message Sent', 'Danny Lee will get back to you within 24hours', 'success');
     }).fail(function(response) {
-      swal("Message Fail", "Please try again", "error")
+      swal('Message Fail', 'Please try again', 'error');
     });
-    return false; // prevent page refresh
   });
 }
 
@@ -83,11 +88,31 @@ function slideshow() {
     src: 'assets/js/vegas/overlays/06.png'
   });
 }
+function datepicker() {
+  var $timepicker = $('#timepicker');
+  $('#datepicker').datepicker({
+    onSelect: function(date) {
+      $('#dateText').text(date);
+    }
+  });
+  $timepicker.timepicker({
+    minTime: '9:00am',
+    maxTime: '7:00pm',
+    showDuration: false
+  });
+  $('#timeBtn').on('click', function(){
+    $timepicker.timepicker('show');
+  });
+  $timepicker.on('change', function(e) {
+    $('#timeText').text($(this).val());
+  });
+}
 
 function init() {
   slideshow();
   carousel();
   scroll();
   mail();
+  datepicker();
 }
 $(document).ready(init);

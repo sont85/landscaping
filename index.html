@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -11,6 +11,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css" rel="stylesheet" />
   <!-- STYLES FOR VIEWPORT ANIMATION -->
   <link href="assets/css/animations.min.css" rel="stylesheet" />
+  <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/sunny/jquery-ui.css' rel='stylesheet' />
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.css' rel='stylesheet' />
   <link href="style.css" rel="stylesheet" />
 </head>
 
@@ -30,6 +32,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#services">SERVICES</a></li>
           <li><a href="#pricing">PRICING</a></li>
+          <li><a href="#work">PREVIOUS WORK</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
@@ -180,11 +183,11 @@
       </div>
     </div>
   </section>
-  <section id='portfolio'>
+  <section id='work'>
     <div class="container">
       <div class="row text-center header animate-in" data-anim-type="fade-in-down">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h3>Work Portfolio</h3>
+          <h3>Previous Work</h3>
           <hr />
         </div>
       </div>
@@ -267,13 +270,33 @@
           <form class="" id="contact_form">
             <div class="modal-body">
               <label for="name">Name</label>
-              <input class='form-control' id="name" name="name" type="text" placeholder='ex. John Smith' required>
+              <input class='form-control' id="name" name="name" type="text" placeholder='ex. John Smith' required />
               <label for="email">Phone Number</label>
-              <input class="form-control" id="phone" name="phone" type="tel" placeholder='123-456-7890' required>
+              <input class="form-control" id="phone" name="phone" type="tel" placeholder='123-456-7890' required />
               <label for="email">Email</label>
-              <input class="form-control" id="email" name="email" type="email" placeholder='example@mail.com' required>
+              <input class="form-control" id="email" name="email" type="email" placeholder='example@mail.com' required />
+              <label for="name">Date and Time</label>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div id='datepicker'></div>
+                </div>
+                <div class='col-xs-6'>
+                  <div class='time-wrap'>
+                    <div class="input-group">
+                      <input class='form-control' id='timepicker' placeholder='time' required />
+                      <span class='input-group-btn'>
+                        <button id='timeBtn' class='btn btn-success' type='button'>Pick Time</button>
+                      </span>
+                    </div>
+                    <div class='time-wrap'>
+                      <span class='h4' id='dateText'></span>
+                      <span class='h4' id='timeText'></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <label for="msg">Message</label>
-              <textarea class="form-control" id="msg" name="msg" class="" cols="6" rows="6" placeholder='Enter your address, time, and date for appointment. We will call you with confirmation.' required></textarea>
+              <textarea class="form-control" id="msg" name="msg" class="" cols="6" rows="6" placeholder='Leave a short message, We will call you with confirmation.' required></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -292,6 +315,8 @@
   <script src="assets/js/appear.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
   <script src="assets/js/animations.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js'></script>
   <script src="main.js"></script>
 </body>
 
