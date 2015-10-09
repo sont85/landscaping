@@ -1,12 +1,3 @@
-// $('.fancybox-media').fancybox({
-//   openEffect: 'elastic',
-//   closeEffect: 'elastic',
-//   helpers: {
-//     title: {
-//       type: 'inside'
-//     }
-//   }
-// });
 'use strict';
 var $;
 function mail() {
@@ -90,21 +81,20 @@ function slideshow() {
 }
 function datepicker() {
   var $timepicker = $('#timepicker');
+  $timepicker.timepicker({
+    minTime: '9:00am',
+    maxTime: '7:00pm',
+    showDuration: false
+  }).on('change', function(e) {
+    $('#timeText').text($(this).val());
+  });
   $('#datepicker').datepicker({
     onSelect: function(date) {
       $('#dateText').text(date);
     }
   });
-  $timepicker.timepicker({
-    minTime: '9:00am',
-    maxTime: '7:00pm',
-    showDuration: false
-  });
   $('#timeBtn').on('click', function(){
     $timepicker.timepicker('show');
-  });
-  $timepicker.on('change', function(e) {
-    $('#timeText').text($(this).val());
   });
 }
 
@@ -114,5 +104,6 @@ function init() {
   scroll();
   mail();
   datepicker();
+  $('a.fancybox-media').fancybox();
 }
 $(document).ready(init);
