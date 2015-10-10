@@ -63,20 +63,20 @@ function carousel() {
 function slideshow() {
   $.vegas('slideshow', {
     backgrounds: [{
-      src: './assets/img/landscape1.jpg',
+      src: 'images/landscape1.jpg',
       fade: 1000,
       delay: 9000
     }, {
-      src: './assets/img/landscape2.png',
+      src: 'images/landscape2.png',
       fade: 1000,
       delay: 9000
     }, {
-      src: './assets/img/landscape3.jpg',
+      src: 'images/landscape3.jpg',
       fade: 1000,
       delay: 9000
     }]
   })('overlay', {
-    src: 'assets/js/vegas/overlays/06.png'
+    src: 'images/overlay.png'
   });
 }
 function datepicker() {
@@ -106,4 +106,4 @@ function init() {
   datepicker();
   $('a.fancybox-media').fancybox();
 }
-$(document).ready(init);
+$( document ).ready(init);
