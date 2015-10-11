@@ -1,5 +1,8 @@
 'use strict';
 var $;
+
+
+
 function mail() {
   $('#contact_form').submit(function(e) {
     e.preventDefault();
@@ -105,5 +108,6 @@ function init() {
   mail();
   datepicker();
   $('a.fancybox-media').fancybox();
+
 }
 $( document ).ready(init);
