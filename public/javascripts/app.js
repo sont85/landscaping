@@ -1,5 +1,15 @@
 'use strict';
-var React;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Contact from './contact';
+import Mandrill from './mandrill';
+import Navbar from './navbar';
+import Payment from './payment';
+import Pricing from './pricing';
+import Services from './services';
+import Testimonials from './testimonials';
+import Work from './work';
+
 var homeStyle = {
   main: {
     marginTop: '150px',
@@ -88,7 +98,7 @@ var App = React.createClass({
         <Mandrill/>
         <Payment/>
         <Footer/>
-      </div>
+      </div>;
   }
 });
 ReactDOM.render(<App/>, document.getElementById('root'));

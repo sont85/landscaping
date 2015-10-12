@@ -1,3 +1,5 @@
+'use strict';
+import React from 'react';
 var Pricing = React.createClass({
   render: function() {
     return <section id='pricing'>
@@ -54,3 +56,4 @@ var Pricing = React.createClass({
       </section>
   }
 });
+module.exports = Pricing;

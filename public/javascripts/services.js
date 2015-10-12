@@ -1,3 +1,5 @@
+'use strict';
+import React from 'react';
 var Services = React.createClass({
   render: function() {
     return <section id='services'>
@@ -58,3 +60,5 @@ var Services = React.createClass({
       </section>
   }
 });
+
+module.exports = Services;

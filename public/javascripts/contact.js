@@ -1,4 +1,5 @@
-
+'use strict';
+import React from 'react';
 var Contact = React.createClass({
   render: function() {
     return <section id='contact'>
@@ -22,6 +23,8 @@ var Contact = React.createClass({
             </div>
           </div>
         </div>
-      </section>
+      </section>;
   }
 });
+
+module.exports = Contact;

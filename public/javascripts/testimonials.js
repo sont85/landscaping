@@ -1,3 +1,5 @@
+'use strict';
+import React from 'react';
 var Testimonials = React.createClass({
   componentDidMount: function() {
     $('#carousel-slider').carousel({
@@ -49,3 +51,5 @@ var Testimonials = React.createClass({
       </section>
   }
 });
+
+module.exports = Testimonials

@@ -1,4 +1,5 @@
 'use strict';
+import React from 'react';
 var Mandrill = React.createClass({
   getInitialState: function() {
     return {
@@ -133,3 +134,4 @@ var Mandrill = React.createClass({
       </div>
   }
 });
+module.exports = Mandrill;

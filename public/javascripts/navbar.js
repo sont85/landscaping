@@ -1,4 +1,5 @@
 'use strict';
+import React from 'react';
 var Navbar = React.createClass({
   render: function() {
     return <div className='navbar navbar-inverse navbar-fixed-top scroll-me' id='menu-section'>
@@ -35,3 +36,4 @@ var Navbar = React.createClass({
       </div>
   }
 });
+module.exports = Navbar;

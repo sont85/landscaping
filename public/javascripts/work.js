@@ -1,3 +1,5 @@
+'use strict';
+import React from 'react';
 var Work = React.createClass({
   componentDidMount: function() {
     $('a.fancybox-media').fancybox();
@@ -60,3 +62,5 @@ var Work = React.createClass({
       </section>
   }
 });
+
+module.exports = Work;
