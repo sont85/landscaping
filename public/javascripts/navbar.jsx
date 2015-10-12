@@ -1,3 +1,4 @@
+'use strict';
 var Navbar = React.createClass({
   render: function() {
     return <div className='navbar navbar-inverse navbar-fixed-top scroll-me' id='menu-section'>
@@ -25,6 +26,9 @@ var Navbar = React.createClass({
             </li>
             <li>
               <a href='#contact'>CONTACT</a>
+            </li>
+            <li>
+              <a href='#home' data-target='#payment' data-toggle='modal'>PAYMENT</a>
             </li>
           </ul>
         </div>

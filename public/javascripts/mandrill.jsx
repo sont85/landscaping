@@ -1,48 +1,17 @@
+'use strict';
 var Mandrill = React.createClass({
+  getInitialState: function() {
+    return {
+      email: '',
+      name: '',
+      msg: '',
+      phone: '',
+      date: '',
+      time: ''
+    };
+  },
   componentDidMount: function() {
-    $('#contact_form').submit(function(e) {
-      e.preventDefault();
-      var email = $('#email').val();
-      var name = $('#name').val();
-      var msg = $('#msg').val();
-      var phone = $('#phone').val();
-      var date = $('#datepicker').datepicker( 'getDate' );
-      var time = $('#timepicker').val();
-      console.log('Phone Number: ' + phone + '\n' + 'Appointment Time' + date + '-' + time + '\n' + msg);
-      $.ajax({
-        type: 'POST',
-        url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-        data: {
-          'key': '7WmAYyvrBPxYbj6OUcGv_Q',
-          'message': {
-            'from_email': email,
-            'from_name': name,
-            'headers': {
-              'Reply-To': email
-            },
-            'subject': 'Website Contact Form Submission',
-            'text': 'Phone Number: ' + phone + '\n' + 'Appointment Time' + date + ' ' + time + '\n' + msg,
-            'to': [{
-              'email': 'vietlyfe@gmail.com',
-              'name': 'Danny Lee',
-              'type': 'to'
-            }]
-          }
-        }
-      }).done(function(response) {
-        console.log(response);
-        $('#name').val('');
-        $('#email').val('');
-        $('#msg').val('');
-        $('#phone').val('');
-        $('#appointment').modal('hide');
-        swal('Message Sent', 'Danny Lee will get back to you within 24hours', 'success');
-      }).fail(function(response) {
-        swal('Message Fail', 'Please try again', 'error');
-      });
-    });
-
-
+    var self = this;
     //timepicker
     var $timepicker = $('#timepicker');
     $timepicker.timepicker({
@@ -50,15 +19,67 @@ var Mandrill = React.createClass({
       maxTime: '7:00pm',
       showDuration: false
     }).on('change', function(e) {
-      $('#timeText').text($(this).val());
-    });
-    $('#datepicker').datepicker({
-      onSelect: function(date) {
-        $('#dateText').text(date);
-      }
+      self.setState({
+        time: e.target.value
+      });
     });
     $('#timeBtn').on('click', function(){
       $timepicker.timepicker('show');
+    });
+
+    //datepicker
+    $('#datepicker').datepicker({
+      onSelect: function(date) {
+        self.setState({
+          date: date
+        });
+      }
+    });
+  },
+  handleChange: function(inputName, e) {
+    var nextState = {};
+    nextState[inputName] = e.target.checked;
+    this.setState(nextState);
+  },
+  handleSubmit: function(e) {
+    e.preventDefault();
+    var date = $('#datepicker').datepicker( 'getDate' );
+    var time = $('#timepicker').val();
+    console.log('Phone Number: ' + phone + '\n' + 'Appointment Time' + date + '-' + time + '\n' + msg);
+    $.ajax({
+      type: 'POST',
+      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+      data: {
+        'key': '7WmAYyvrBPxYbj6OUcGv_Q',
+        'message': {
+          'from_email': this.state.email,
+          'from_name': this.state.name,
+          'headers': {
+            'Reply-To': this.state.email
+          },
+          'subject': 'Website Contact Form Submission',
+          'text': 'Phone Number: ' + this.state.phone + '\n' + 'Appointment Time' + date + ' ' + time + '\n' + this.state.msg,
+          'to': [{
+            'email': 'sont85@gmail.com',
+            'name': 'Danny Lee',
+            'type': 'to'
+          }]
+        }
+      }
+    }).done(function(response) {
+      console.log(response);
+      this.setState({
+        name: '',
+        email: '',
+        msg: '',
+        phone: '',
+        time: '',
+        date: ''
+      });
+      $('#appointment').modal('hide');
+      swal('Message Sent', 'Danny Lee will get back to you within 24hours', 'success');
+    }.bind(this)).fail(function(response) {
+      swal('Message Fail', 'Please try again', 'error');
     });
   },
   render: function() {
@@ -71,14 +92,14 @@ var Mandrill = React.createClass({
               </button>
               <h4 className='modal-title' id='myModalLabel'>Book Appointment</h4>
             </div>
-            <form className='' id='contact_form'>
+            <form className='' onSubmit={this.handleSubmit}>
               <div className='modal-body'>
                 <label htmlFor='name'>Name</label>
-                <input className='form-control' id='name' name='name' placeholder='ex. John Smith' required type='text'/>
+                <input onChange={this.handleChange.bind(this, 'name')} className='form-control' id='name' name='name' value={this.state.name} placeholder='ex. John Smith' type='text' required />
                 <label htmlFor='email'>Phone Number</label>
-                <input className='form-control' id='phone' name='phone' placeholder='123-456-7890' required type='tel'/>
+                <input onChange={this.handleChange.bind(this, 'phone')} className='form-control' id='phone' name='phone' value={this.state.phone} placeholder='123-456-7890' type='tel' required />
                 <label htmlFor='email'>Email</label>
-                <input className='form-control' id='email' name='email' placeholder='example@mail.com' required type='email'/>
+                <input onChange={this.handleChange.bind(this, 'email')} className='form-control' id='email' name='email' value={this.state.email} placeholder='example@mail.com' type='email' required />
                 <label htmlFor='name'>Date and Time</label>
                 <div className='row'>
                   <div className='col-sm-6'>
@@ -94,13 +115,13 @@ var Mandrill = React.createClass({
                       </div>
                     </div>
                     <div className='time-wrap'>
-                      <span className='h4' id='dateText'></span>
-                      <span className='h4' id='timeText'></span>
+                      <span className='h4' id='dateText'>{this.state.date}</span>
+                      <span className='h4' id='timeText'>{this.state.time}</span>
                     </div>
                   </div>
                 </div>
                 <label htmlFor='msg'>Message</label>
-                <textarea className='' className='form-control' cols='6' id='msg' name='msg' placeholder='Leave a short message, We will call you with confirmation.' required rows='6'></textarea>
+                <textarea onChange={this.handleChange.bind(this, 'msg')}  className='form-control' cols='6' id='msg' name='msg' placeholder='Leave a short message, We will call you with confirmation.' value={this.state.msg} rows='6' required></textarea>
               </div>
               <div className='modal-footer'>
                 <button className='btn btn-default' data-dismiss='modal' type='button'>Close</button>

@@ -1,5 +1,5 @@
 'use strict';
-
+var React;
 var homeStyle = {
   main: {
     marginTop: '150px',
@@ -29,8 +29,6 @@ var Home = React.createClass({
   }
 });
 
-
-
 var Footer = React.createClass({
   render: function() {
     return <footer>
@@ -43,7 +41,7 @@ var Footer = React.createClass({
             </div>
           </div>
         </div>
-      </footer>
+      </footer>;
   }
 });
 
@@ -86,8 +84,9 @@ var App = React.createClass({
         <Pricing/>
         <Work/>
         <Testimonials/>
-        <Mandrill/>
         <Contact />
+        <Mandrill/>
+        <Payment/>
         <Footer/>
       </div>
   }
