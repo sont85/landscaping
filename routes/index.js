@@ -14,8 +14,8 @@ router.post('/payment', function(req, res) {
     amount: req.body.amount,
     currency: 'usd',
     source: req.body.stripeToken,
-    receipt_email: 'sont85@gmail.com',
-    description: 'Example charge, JOHN SMITH 29.99 AUGUST'
+    receipt_email: req.body.email,
+    description: req.body.name + ' ' + req.body.amount
   }, function(err, charge) {
     if (err && err.type === 'StripeCardError') {
       console.log('------------',err);

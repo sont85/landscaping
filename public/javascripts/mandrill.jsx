@@ -60,7 +60,7 @@ var Mandrill = React.createClass({
           'subject': 'Website Contact Form Submission',
           'text': 'Phone Number: ' + this.state.phone + '\n' + 'Appointment Time' + date + ' ' + time + '\n' + this.state.msg,
           'to': [{
-            'email': 'sont85@gmail.com',
+            'email': 'vietlyfe@gmail.com',
             'name': 'Danny Lee',
             'type': 'to'
           }]

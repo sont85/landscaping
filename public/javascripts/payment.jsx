@@ -4,11 +4,18 @@ var Payment = React.createClass({
     return {
       charging: false,
       errorMessage: null,
-      amount: 2900
+      amount: null,
+      name: null,
+      email: null
     };
   },
   componentDidMount: function() {
     Stripe.setPublishableKey('pk_test_Ij3se1Hg07Oc3g4mlIwamvLT');
+  },
+  handleChange: function(inputName, e) {
+    var nextState = {};
+    nextState[inputName] = e.target.value;
+    this.setState(nextState);
   },
   handleAmount: function(e) {
     this.setState({
@@ -33,7 +40,9 @@ var Payment = React.createClass({
     } else {
       $.post('/payment', {
         stripeToken: response.id,
-        amount: this.state.amount
+        amount: this.state.amount,
+        name: this.state.name,
+        email: this.state.email
       }, (function(response) {
         console.log(response);
         if (response === 'success') {
@@ -61,6 +70,14 @@ var Payment = React.createClass({
             <form action="/" id="payment-form" method="POST" onSubmit={this.handleSubmit}>
               <span className="payment-errors">{this.state.errorMessage}</span>
               <div className="form-row">
+                <label>
+                  <span>Full Name</span>
+                  <input onChange={this.handleChange.bind(this, 'name')} size="20" type="text" required/>
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input onChange={this.handleChange.bind(this, 'email')} size="20" type="email" required/>
+                </label>
                 <div>
                   <label><input name='amount' onChange={this.handleAmount} type='radio' value='2900' required/>$29</label>
                   <label><input name='amount' onChange={this.handleAmount} type='radio' value='5900' required/>$59</label>
