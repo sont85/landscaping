@@ -38,7 +38,7 @@ var Mandrill = React.createClass({
   },
   handleChange: function(inputName, e) {
     var nextState = {};
-    nextState[inputName] = e.target.checked;
+    nextState[inputName] = e.target.value;
     this.setState(nextState);
   },
   handleSubmit: function(e) {
