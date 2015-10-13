@@ -19,6 +19,11 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         loader: 'style!css'
+      },
+      {
+        test: /\.(jpg|png|ttf|eot)$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?limit=10000'
       }
     ]
   }
