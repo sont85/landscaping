@@ -1,9 +1,11 @@
 'use strict';
+var path = require('path');
 module.exports = {
-  context: __dirname + '/public/javascripts',
-  entry: ['./app.js'],
+  context: __dirname + '/javascripts',
+  // context: path.resolve('javascripts'),
+  entry: ['./app'],
   output: {
-    path: __dirname + '/public',
+    path: path.resolve('public/assets/'),
     filename: 'bundle.js'
   },
   module: {
@@ -11,7 +13,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style!css'
       }
     ]
   }
