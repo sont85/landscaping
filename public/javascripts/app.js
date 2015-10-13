@@ -62,21 +62,21 @@ var App = React.createClass({
     $.vegas('slideshow', {
       backgrounds: [
         {
-          src: 'images/landscape1.jpg',
+          src: 'public/images/landscape1.jpg',
           fade: 1000,
           delay: 9000
         }, {
-          src: 'images/landscape2.png',
+          src: 'public/images/landscape2.png',
           fade: 1000,
           delay: 9000
         }, {
-          src: 'images/landscape3.jpg',
+          src: 'public/images/landscape3.jpg',
           fade: 1000,
           delay: 9000
         }
       ]
     })('overlay', {
-      src: 'images/overlay.png'
+      src: 'public/images/overlay.png'
     });
     $('.scroll-me a').bind('click', function(event) {
       var $anchor = $(this);

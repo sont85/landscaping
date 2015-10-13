@@ -23,24 +23,24 @@ var Work = React.createClass({
                 </ol>
                 <div className='carousel-inner' role='listbox'>
                   <div className='item active'>
-                    <a className='fancybox-media' href='images/landscape1.jpg'>
-                      <img className='img-responsive center-block' src='images/landscape1.jpg'/>
+                    <a className='fancybox-media' href='public/images/landscape1.jpg'>
+                      <img className='img-responsive center-block' src='public/images/landscape1.jpg'/>
                     </a>
                     <div className='carousel-caption'>
                       New Lawn
                     </div>
                   </div>
                   <div className='item'>
-                    <a className='fancybox-media' href='images/landscape3.jpg'>
-                      <img className='img-responsive center-block fancybox-media' src='images/landscape3.jpg'/>
+                    <a className='fancybox-media' href='public/images/landscape3.jpg'>
+                      <img className='img-responsive center-block fancybox-media' src='public/images/landscape3.jpg'/>
                     </a>
                     <div className='carousel-caption'>
                       New Fence
                     </div>
                   </div>
                   <div className='item'>
-                    <a className='fancybox-media' href='images/landscape2.png'>
-                      <img className='img-responsive center-block fancybox-media' src='images/landscape2.png'/>
+                    <a className='fancybox-media' href='public/images/landscape2.png'>
+                      <img className='img-responsive center-block fancybox-media' src='public/images/landscape2.png'/>
                     </a>
                     <div className='carousel-caption'>
                       New Yard

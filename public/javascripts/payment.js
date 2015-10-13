@@ -1,5 +1,6 @@
 'use strict';
 import React from 'react';
+
 var Payment = React.createClass({
   getInitialState: function() {
     return {

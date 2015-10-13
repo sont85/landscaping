@@ -79,19 +79,19 @@
 
 	var _payment2 = _interopRequireDefault(_payment);
 
-	var _pricing = __webpack_require__(243);
+	var _pricing = __webpack_require__(163);
 
 	var _pricing2 = _interopRequireDefault(_pricing);
 
-	var _services = __webpack_require__(244);
+	var _services = __webpack_require__(164);
 
 	var _services2 = _interopRequireDefault(_services);
 
-	var _testimonials = __webpack_require__(245);
+	var _testimonials = __webpack_require__(165);
 
 	var _testimonials2 = _interopRequireDefault(_testimonials);
 
-	var _work = __webpack_require__(246);
+	var _work = __webpack_require__(166);
 
 	var _work2 = _interopRequireDefault(_work);
 
@@ -180,20 +180,20 @@
 	    //slidshow
 	    $.vegas('slideshow', {
 	      backgrounds: [{
-	        src: 'images/landscape1.jpg',
+	        src: 'public/images/landscape1.jpg',
 	        fade: 1000,
 	        delay: 9000
 	      }, {
-	        src: 'images/landscape2.png',
+	        src: 'public/images/landscape2.png',
 	        fade: 1000,
 	        delay: 9000
 	      }, {
-	        src: 'images/landscape3.jpg',
+	        src: 'public/images/landscape3.jpg',
 	        fade: 1000,
 	        delay: 9000
 	      }]
 	    })('overlay', {
-	      src: 'images/overlay.png'
+	      src: 'public/images/overlay.png'
 	    });
 	    $('.scroll-me a').bind('click', function (event) {
 	      var $anchor = $(this);
@@ -20382,87 +20382,7 @@
 	module.exports = Payment;
 
 /***/ },
-/* 163 */,
-/* 164 */,
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20626,7 +20546,7 @@
 	module.exports = Pricing;
 
 /***/ },
-/* 244 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20793,7 +20713,7 @@
 	            _react2['default'].createElement(
 	              'a',
 	              { 'data-target': '#appointment', 'data-toggle': 'modal', href: '#' },
-	              _react2['default'].createElement('img', { className: 'center-block img-responsive', src: '/images/estimate.jpg', width: '300px' })
+	              _react2['default'].createElement('img', { className: 'center-block img-responsive', src: 'public/images/estimate.jpg', width: '300px' })
 	            )
 	          )
 	        )
@@ -20805,7 +20725,7 @@
 	module.exports = Services;
 
 /***/ },
-/* 245 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20947,7 +20867,7 @@
 	module.exports = Testimonials;
 
 /***/ },
-/* 246 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21009,8 +20929,8 @@
 	                  { className: 'item active' },
 	                  _react2['default'].createElement(
 	                    'a',
-	                    { className: 'fancybox-media', href: 'images/landscape1.jpg' },
-	                    _react2['default'].createElement('img', { className: 'img-responsive center-block', src: 'images/landscape1.jpg' })
+	                    { className: 'fancybox-media', href: 'public/images/landscape1.jpg' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive center-block', src: 'public/images/landscape1.jpg' })
 	                  ),
 	                  _react2['default'].createElement(
 	                    'div',
@@ -21023,8 +20943,8 @@
 	                  { className: 'item' },
 	                  _react2['default'].createElement(
 	                    'a',
-	                    { className: 'fancybox-media', href: 'images/landscape3.jpg' },
-	                    _react2['default'].createElement('img', { className: 'img-responsive center-block fancybox-media', src: 'images/landscape3.jpg' })
+	                    { className: 'fancybox-media', href: 'public/images/landscape3.jpg' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive center-block fancybox-media', src: 'public/images/landscape3.jpg' })
 	                  ),
 	                  _react2['default'].createElement(
 	                    'div',
@@ -21037,8 +20957,8 @@
 	                  { className: 'item' },
 	                  _react2['default'].createElement(
 	                    'a',
-	                    { className: 'fancybox-media', href: 'images/landscape2.png' },
-	                    _react2['default'].createElement('img', { className: 'img-responsive center-block fancybox-media', src: 'images/landscape2.png' })
+	                    { className: 'fancybox-media', href: 'public/images/landscape2.png' },
+	                    _react2['default'].createElement('img', { className: 'img-responsive center-block fancybox-media', src: 'public/images/landscape2.png' })
 	                  ),
 	                  _react2['default'].createElement(
 	                    'div',

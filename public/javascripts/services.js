@@ -52,7 +52,7 @@ var Services = React.createClass({
           <div className='row'>
             <div className='col-sm-4 col-sm-offset-4'>
               <a data-target='#appointment' data-toggle='modal' href='#'>
-                <img className='center-block img-responsive' src='/images/estimate.jpg' width='300px'/>
+                <img className='center-block img-responsive' src='public/images/estimate.jpg' width='300px'/>
               </a>
             </div>
           </div>
