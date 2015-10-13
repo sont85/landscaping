@@ -9,7 +9,6 @@ import Pricing from './pricing';
 import Services from './services';
 import Testimonials from './testimonials';
 import Work from './work';
-
 var homeStyle = {
   main: {
     marginTop: '150px',
