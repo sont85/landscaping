@@ -1,6 +1,6 @@
 'use strict';
-import '../css/animate.css';
-import '../css/style.css';
+import '../styles/animate.css';
+import '../styles/style.scss';
 import './bootstrap.js';
 import './jquery.vegas.min.js';
 import React from 'react';
