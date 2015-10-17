@@ -13,29 +13,15 @@ import Pricing from './pricing';
 import Services from './services';
 import Testimonials from './testimonials';
 import Work from './work';
-console.log('your face');
-var homeStyle = {
-  main: {
-    marginTop: '150px',
-    marginBottom: '200px'
-  },
-  title: {
-    fontFamily: 'Exo'
-  },
-  subtitle: {
-    fontFamily: 'Exo',
-    fontStyle: 'italic'
-  }
-};
 
 var Home = React.createClass({
   render: function() {
-    return <section id='home' style={homeStyle.main}>
+    return <section id='home'>
         <div className='container'>
           <div className='row text-center header'>
             <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-              <h1 className='title' style={homeStyle.title}>Danny Lee's Landscaping</h1>
-              <h4 className='subtitle' style={homeStyle.subtitle}>Beautifying the Bay Area</h4>
+              <h1 className='title'>Danny Lee's Landscaping</h1>
+              <h4 className='subtitle'>Beautifying the Bay Area</h4>
             </div>
           </div>
         </div>

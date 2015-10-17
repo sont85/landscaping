@@ -67,43 +67,51 @@ var Payment = React.createClass({
               <button aria-label='Close' className='close' data-dismiss='modal' type='button'>
                 <span aria-hidden='true'>&times;</span>
               </button>
-              <h4 className='modal-title' id='myModalLabel'>Payment</h4>
+                <img className='img-responsive center-block' src='../images/payment-stripe.png' />              
             </div>
             <form action="/" id="payment-form" method="POST" onSubmit={this.handleSubmit}>
               <span className="payment-errors">{this.state.errorMessage}</span>
-              <div className="form-row">
-                <label>
-                  <span>Full Name</span>
-                  <input onChange={this.handleChange.bind(this, 'name')} size="20" type="text" required/>
-                </label>
-                <label>
-                  <span>Email</span>
-                  <input onChange={this.handleChange.bind(this, 'email')} size="20" type="email" required/>
-                </label>
+              <div>
+                <label>Card Number</label>
                 <div>
-                  <label><input name='amount' onChange={this.handleAmount} type='radio' value='2900' required/>$29</label>
-                  <label><input name='amount' onChange={this.handleAmount} type='radio' value='5900' required/>$59</label>
-                </div>
-                <label>
-                  <span>Card Number</span>
                   <input data-stripe="number" size="20" type="text"/>
-                </label>
+                </div>
               </div>
-              <div className="form-row">
-                <label>
-                  <span>CVC</span>
-                  <input data-stripe="cvc" size="4" type="text"/>
-                </label>
+              <div className='row'>
+                <div className='col-xs-6'>
+                  <label>Expiration (MM/YYYY)</label>
+                  <div>
+                      <input data-stripe="exp-month" size="2" type="text"/>
+                    <span>/</span>
+                    <input data-stripe="exp-year" size="4" type="text"/>
+                  </div>
+                </div>
+                <div className='col-xs-6'>
+                  <label>CVC</label>
+                  <div>
+                    <input data-stripe="cvc" size="4" type="text"/>
+                  </div>
+                </div>
               </div>
-              <div className="form-row">
-                <label>
-                  <span>Expiration (MM/YYYY)</span>
-                  <input data-stripe="exp-month" size="2" type="text"/>
-                </label>
-                <span>/</span>
-                <input data-stripe="exp-year" size="4" type="text"/>
+              <div className='row'>
+                <div className='col-xs-6'>
+                  <label>Name on card</label>
+                  <div>
+                    <input onChange={this.handleChange.bind(this, 'name')} size="20" type="text" required/>
+                  </div>
+                </div>
+                <div className='col-xs-6'>
+                  <label>Email</label>
+                  <div>
+                    <input onChange={this.handleChange.bind(this, 'email')} size="20" type="email" required/>
+                  </div>
+                </div>
               </div>
-              <button disabled={this.state.charging} type="submit">Submit Payment</button>
+              <div>
+                <label><input name='amount' onChange={this.handleAmount} type='radio' value='2900' required/>$29 Basic Plan</label>
+                <label><input name='amount' onChange={this.handleAmount} type='radio' value='5900' required/>$59 Premium Plan</label>
+              </div>
+              <button className='btn-custom-two' disabled={this.state.charging} type="submit">Submit Payment</button>
             </form>
           </div>
         </div>
