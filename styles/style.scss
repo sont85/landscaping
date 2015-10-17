@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Exo:400,900);
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+}
+#home {
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+#home .title {
+  font-family: Exo;
+}
+#home .subtitle {
+  font-family: Exo;
+  font-style: italic;
+}
+#menu-section li a:hover{
+  color: rgb(57, 171, 111);
+}
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+section hr {
+  width: 75px;
+  border-top: 2px solid rgb(57, 171, 111);
+}
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 0px;
+  letter-spacing: 1.5px;
+  margin: 10px 15px 10px 15px;
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  border-bottom: 1px solid rgb(57, 171, 111);
+}
+.navbar-collapse ul {
+  padding-right: 20px;
+}
+#testimonial {
+  margin-bottom: 50px;
+}
+#testimonial #carousel-slider {
+  margin-bottom: 30px;
+}
+#testimonial #carousel-slider .item {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+  padding: 20px 20px 30px 20px;
+  border-radius: 15px;
+}
+#testimonial #carousel-slider .item cite{
+  float: right;
+}
+#testimonial #carousel-slider h3 {
+  line-height: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(57, 171, 111);
+}
+#testimonial #carousel-slider q {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 25px 35px;
+}
+#testimonial .guranteed {
+  color: rgb(57, 171, 111);
+  font-weight: bolder;
+  font-size: 30px;
+}
+.btn-custom-one {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgb(57, 171, 111);
+}
+.btn-custom-one:hover {
+  color: #fff;
+  transition: 1s;
+  background-color: rgb(57, 171, 111);
+}
+.btn-custom-two {
+  color: #fff;
+  background-color: rgb(57, 171, 111);
+  border: 2px solid rgb(57, 171, 111);
+  margin-top: 30px;
+}
+#services .services-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 30px;
+  min-height: 420px;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  border-radius: 15px;
+}
+#services .services-wrapper ul {
+  list-style: none;
+}
+#services .services-wrapper img {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+#pricing .pricing-wrapper {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  background: rgba(255,255,255, .1);
+}
+#pricing .type {
+  background-color: rgb(57, 171, 111);
+}
+#pricing .type h2 {
+  line-height: 3em;
+}
+#pricing .pricing-wrapper .price {
+  padding: 40px 20px 20px 20px;
+  font-size: 60px;
+  font-weight: 900;
+}
+#pricing ul {
+  list-style: none;
+}
+#work .item {
+  border-top: 10px solid rgb(57, 171, 111);
+  border-bottom: 10px solid rgb(57, 171, 111);
+
+  height: 400px;
+}
+#work .item img {
+  height: 380px;
+  width: 100%;
+}
+#contact .contact-wrapper {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  background: rgba(255,255,255, .1);
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+#contact .contact-wrapper h2 {
+  color: rgb(57, 171, 111);
+  font-size: 40px;
+}
+#contact .contact-wrapper .btn {
+  margin-bottom: 30px;
+}
+.modal {
+  color: black;
+}
+
+.modal .time-wrap {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.modal textarea {
+  resize: vertical;
+}
+.modal .h4 {
+  color: green;
+}
+.modal label {
+  margin-top: 10px;
+}
