@@ -29,7 +29,7 @@ var Navbar = React.createClass({
               <a href='#contact'>CONTACT</a>
             </li>
             <li>
-              <a href='#home' data-target='#payment' data-toggle='modal'>PAYMENT</a>
+              <a href='#' data-target='#payment' data-toggle='modal'>PAYMENT</a>
             </li>
           </ul>
         </div>
