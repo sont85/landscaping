@@ -49,13 +49,6 @@ var Services = React.createClass({
               </div>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-sm-4 col-sm-offset-4'>
-              <a data-target='#appointment' data-toggle='modal' href='#'>
-                <img className='center-block img-responsive' src='images/estimate.jpg' width='300px'/>
-              </a>
-            </div>
-          </div>
         </div>
       </section>
   }
