@@ -67,7 +67,7 @@ var Payment = React.createClass({
               <button aria-label='Close' className='close' data-dismiss='modal' type='button'>
                 <span aria-hidden='true'>&times;</span>
               </button>
-                <img className='img-responsive center-block' src='../images/payment-stripe.png' />              
+                <img className='img-responsive center-block' src='../images/payment-stripe.png' />
             </div>
             <form action="/" id="payment-form" method="POST" onSubmit={this.handleSubmit}>
               <span className="payment-errors">{this.state.errorMessage}</span>
@@ -108,8 +108,10 @@ var Payment = React.createClass({
                 </div>
               </div>
               <div>
-                <label><input name='amount' onChange={this.handleAmount} type='radio' value='2900' required/>$29 Basic Plan</label>
-                <label><input name='amount' onChange={this.handleAmount} type='radio' value='5900' required/>$59 Premium Plan</label>
+                <input name='amount' onChange={this.handleAmount} type='radio' value='2900' required/>
+                <label className='radio-label'>$29 Basic Plan</label>
+                <input name='amount' onChange={this.handleAmount} type='radio' value='5900' required/>
+                <label className='radio-label'>$59 Premium Plan</label>
               </div>
               <button className='btn-custom-two' disabled={this.state.charging} type="submit">Submit Payment</button>
             </form>
